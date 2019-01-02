@@ -6,9 +6,9 @@ APP_USERREPO=github.com/sapk
 APP_PACKAGE=$(APP_USERREPO)/$(APP_NAME)
 
 
-PLUGIN_USER ?= sapk
+PLUGIN_USER ?= lukics
 PLUGIN_NAME ?= plugin-gluster
-PLUGIN_TAG ?= latest
+PLUGIN_TAG ?= armv7l
 PLUGIN_IMAGE ?= $(PLUGIN_USER)/$(PLUGIN_NAME):$(PLUGIN_TAG)
 
 GIT_HASH=$(shell git rev-parse --short HEAD)
