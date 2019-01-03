@@ -2,10 +2,10 @@
 #PATH=$(PATH:):$(GOPATH)/bin
 APP_NAME=docker-volume-gluster
 APP_VERSION=$(shell git describe --tags --abbrev=0)
-APP_USERREPO=github.com/sapk
+APP_USERREPO=github.com/lukicsl
 APP_PACKAGE=$(APP_USERREPO)/$(APP_NAME)
 
-PLUGIN_USER ?= sapk
+PLUGIN_USER ?= lukics
 PLUGIN_NAME ?= plugin-gluster
 PLUGIN_TAG ?= latest
 PLUGIN_IMAGE ?= $(PLUGIN_USER)/$(PLUGIN_NAME):$(PLUGIN_TAG)
