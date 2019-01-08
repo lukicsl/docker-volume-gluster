@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gluster"
+	"github.com/sapk/docker-volume-gluster/gluster"
 )
 
 var (
