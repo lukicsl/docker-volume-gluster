@@ -1,7 +1,11 @@
-# docker-volume-gluster [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/sapk/docker-volume-gluster/blob/master/LICENSE) ![Project Status](http://img.shields.io/badge/status-beta-orange.svg)
-[![GitHub release](https://img.shields.io/github/release/sapk/docker-volume-gluster.svg)](https://github.com/sapk/docker-volume-gluster/releases) [![Go Report Card](https://goreportcard.com/badge/github.com/sapk/docker-volume-gluster)](https://goreportcard.com/report/github.com/sapk/docker-volume-gluster)
-[![codecov](https://codecov.io/gh/sapk/docker-volume-gluster/branch/master/graph/badge.svg)](https://codecov.io/gh/sapk/docker-volume-gluster)
- master : [![Travis master](https://api.travis-ci.org/sapk/docker-volume-gluster.svg?branch=master)](https://travis-ci.org/sapk/docker-volume-gluster) develop : [![Travis develop](https://api.travis-ci.org/sapk/docker-volume-gluster.svg?branch=develop)](https://travis-ci.org/sapk/docker-volume-gluster)
+# docker-volume-gluster
+
+    #To build lukicsl/plugin-gluster:armv7l
+    PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin
+    #To test lukicsl/plugin-gluster:armv7l
+    PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin-enable
+    #To publish to docker hub lukicsl/plugin-gluster:armv7l
+    PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin-push
 
 
 Use GlusterFS as a backend for docker volume
