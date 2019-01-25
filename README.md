@@ -1,11 +1,11 @@
 # docker-volume-gluster
 
-    #To build lukicsl/plugin-gluster:armv7l
-    PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin
-    #To test lukicsl/plugin-gluster:armv7l
-    PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin-enable
-    #To publish to docker hub lukicsl/plugin-gluster:armv7l
-    PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin-push
+    #To build lukics/plugin-gluster:armv7l
+    PLUGIN_USER=lukics PLUGIN_TAG=armv7 make docker-plugin
+    #To test lukicsl/plugin-gluster:armv7
+    PLUGIN_USER=lukics PLUGIN_TAG=armv7 make docker-plugin-enable
+    #To publish to docker hub lukicsl/plugin-gluster:armv7
+    PLUGIN_USER=lukics PLUGIN_TAG=armv7 make docker-plugin-push
 
 
 Use GlusterFS as a backend for docker volume
