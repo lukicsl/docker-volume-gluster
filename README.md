@@ -1,10 +1,27 @@
-# docker-volume-gluster [![License](https://img.shields.io/badge/license-MIT-red.svg)](https://github.com/sapk/docker-volume-gluster/blob/master/LICENSE) ![Project Status](http://img.shields.io/badge/status-alpha-red.svg)
-[![GitHub release](https://img.shields.io/github/release/sapk/docker-volume-gluster.svg)](https://github.com/sapk/docker-volume-gluster/releases) [![Go Report Card](https://goreportcard.com/badge/github.com/sapk/docker-volume-gluster)](https://goreportcard.com/report/github.com/sapk/docker-volume-gluster)
-[![codecov](https://codecov.io/gh/sapk/docker-volume-gluster/branch/master/graph/badge.svg)](https://codecov.io/gh/sapk/docker-volume-gluster)
- master : [![Travis master](https://api.travis-ci.org/sapk/docker-volume-gluster.svg?branch=master)](https://travis-ci.org/sapk/docker-volume-gluster) develop : [![Travis develop](https://api.travis-ci.org/sapk/docker-volume-gluster.svg?branch=develop)](https://travis-ci.org/sapk/docker-volume-gluster)
+# docker-volume-gluster
 
+     No problem for the confusion, the docker docs doesn't help on this subject and it is quite confusing. Basically, managed plugin are legacy plugin inside a container that can be distributed as an image via registry.
+     To build the managed plugin use: make docker-plugin (https://github.com/sapk/docker-volume-gluster/blob/old/Makefile#L42)
+     This will build the image.
+     You can enable it with make docker-plugin-enable (https://github.com/sapk/docker-volume-gluster/blob/old/Makefile#L68)
 
-Use GlusterFS as a backend for docker volume
+     If you want to publish the result to a registry you can set custom env variable
+
+     PLUGIN_USER ?= sapk
+     PLUGIN_NAME ?= plugin-gluster
+     PLUGIN_TAG ?= latest
+     and use the command docker-plugin-push to publish to docker hub.
+
+     Ex:
+
+     #To build lukicsl/plugin-gluster:armv7l
+     PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin
+     #To test lukicsl/plugin-gluster:armv7l
+     PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin-enable
+     #To publish to docker hub lukicsl/plugin-gluster:armv7l
+     PLUGIN_USER=lukicsl PLUGIN_TAG=armv7l make docker-plugin-push
+     Please let me know if it works (normally it should but I never try).
+     I could try to setup multi-arch plugin like I have done for some of my other docker images.
 
 Status : **proof of concept (working)**
 
